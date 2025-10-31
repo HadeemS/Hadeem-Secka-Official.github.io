@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import '../styles/contact.css'
 
 const ENDPOINT = "https://api.web3forms.com/submit"
 const ACCESS_KEY = "4b370dcc-6fd1-4c70-ad6c-98ba1e9a9835"
