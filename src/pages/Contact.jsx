@@ -1,3 +1,13 @@
+/**
+ * Contact Page with Working Contact Form
+ * 
+ * Features a functional contact form that:
+ * - Sends emails via Web3Forms API (async, no redirect)
+ * - Validates form fields before submission
+ * - Shows inline success/error messages
+ * - Includes a responsive map iframe
+ * - Integrates seamlessly into the page (no external redirect)
+ */
 import { useState, useRef } from 'react'
 import '../styles/contact.css'
 

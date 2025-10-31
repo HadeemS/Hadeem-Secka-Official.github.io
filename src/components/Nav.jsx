@@ -1,3 +1,14 @@
+/**
+ * Navigation Component with JS Toggle Menu
+ * 
+ * Features JavaScript toggle menu for mobile navigation:
+ * - Hamburger menu button toggles navigation visibility
+ * - Mobile-responsive with collapsible menu
+ * - Closes automatically when navigation link is clicked
+ * - Accessible with ARIA attributes (aria-expanded, aria-controls)
+ * 
+ * Uses React useState hook to manage menu open/closed state
+ */
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import '../styles/nav.css'
