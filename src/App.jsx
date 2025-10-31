@@ -1,7 +1,7 @@
 ﻿import { Routes, Route } from 'react-router-dom'
 import SiteLayout from './layouts/SiteLayout'
 import Home from './pages/Home'
-import BirdsOfPrey from './pages/BirdsOfPrey'
+import BirdsOfPrey from './pages/BirdOfPrey'
 import Powerhouses from './pages/Powerhouses'
 import About from './pages/About'
 import History from './pages/History'
