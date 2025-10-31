@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  // Use GitHub Pages base path (your repo name)
-  base: "/Hadeem-Secka-Official.github.io/"
+  // Try root first - if repo name matches username.github.io pattern, it may deploy to root
+  // If not working, change to "/Hadeem-Secka-Official.github.io/"
+  base: "/"
 });
