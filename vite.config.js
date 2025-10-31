@@ -3,5 +3,6 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? "/Hadeem-Secka-Official.github.io/" : "/"
+  // Use "/" for custom domain, or GitHub Pages base path if not using custom domain
+  base: "/"
 });
