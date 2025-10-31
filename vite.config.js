@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  // Use "/" for custom domain, or GitHub Pages base path if not using custom domain
-  base: "/"
+  // Use GitHub Pages base path (your repo name)
+  base: "/Hadeem-Secka-Official.github.io/"
 });
