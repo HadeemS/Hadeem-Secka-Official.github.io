@@ -1,0 +1,20 @@
+.nav{ position: sticky; top: 0; background: var(--surface); border-bottom: 1px solid var(--line); z-index: 10; }
+.nav__inner{ display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; height: var(--nav-h); }
+.nav__brand{ display: inline-flex; align-items: center; gap: 10px; padding: 0 var(--pad); }
+.nav__logo{ width: 36px; height: 36px; }
+.nav__title{ font-weight: 700; }
+
+
+.nav__links{ display: flex; align-items: center; gap: 16px; padding-right: var(--pad); }
+.nav__links a{ text-decoration: none; color: var(--ink); padding: 10px 12px; border-radius: 10px; }
+.nav__links a:hover{ background: var(--bg-alt); }
+.nav__links a.active{ background: var(--brand-100); color: var(--brand-600); }
+
+
+/* On small screens, stack menu vertically */
+/* Media Queries */
+@media (max-width: 760px){
+.nav__inner{ grid-template-columns: 1fr; align-items: start; height: auto; padding: 10px 0; }
+.nav__links{ flex-direction: column; align-items: stretch; gap: 6px; padding: 0 var(--pad) 10px; }
+.nav__links a{ padding: 12px; }
+}

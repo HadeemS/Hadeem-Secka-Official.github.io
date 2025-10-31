@@ -1,0 +1,8 @@
+.updates{ display: grid; gap: 10px; max-height: 220px; overflow: auto; padding-right: 6px; }
+.update{ padding: 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg-alt); }
+
+
+/* Media Queries */
+@media (max-width: 520px){
+.updates{ max-height: none; }
+}
