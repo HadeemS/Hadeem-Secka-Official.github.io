@@ -1,25 +1,25 @@
 ﻿import { Routes, Route } from 'react-router-dom'
 import SiteLayout from './layouts/SiteLayout'
 import Home from './pages/Home'
-import BirdsOfPrey from './pages/BirdOfPrey'
-import Powerhouses from './pages/Powerhouses'
-import About from './pages/About'
-import History from './pages/History'
+import Teams from './pages/Teams'
+import Schedule from './pages/Schedule'
+import News from './pages/News'
+import Favorites from './pages/Favorites'
 import Contact from './pages/Contact'
 
 
 export default function App(){
-return (
-<SiteLayout>
-<Routes>
-<Route path="/" element={<Home />} />
-<Route path="/birds-of-prey" element={<BirdsOfPrey />} />
-<Route path="/powerhouses" element={<Powerhouses />} />
-<Route path="/about" element={<About />} />
-<Route path="/history" element={<History />} />
-<Route path="/contact" element={<Contact />} />
-<Route path="*" element={<Home />} />
-</Routes>
-</SiteLayout>
-)
+  return (
+    <SiteLayout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/teams" element={<Teams />} />
+        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </SiteLayout>
+  )
 }

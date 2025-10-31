@@ -1,35 +1,56 @@
-import Section from '../components/Section'
-import TeamCard from '../components/TeamCard'
-import '../styles/home.css'
-
+import { Link } from 'react-router-dom'
 
 export default function Home(){
-const teams = [
-{ name:'Atlanta Falcons', league:'NFL', image:'/images/falcons.jpg', blurb:'Rise Up! Explore the Birds of Prey page for roster notes, history, and more.' },
-{ name:'Atlanta Braves', league:'MLB', image:'/images/braves.jpg', blurb:'Chop On. See season storylines and franchise milestones on Powerhouses.' },
-{ name:'Atlanta Hawks', league:'NBA', image:'/images/hawks.jpg', blurb:'True to Atlanta. Dive into the Hawks’ biggest moments and era highlights.' },
-{ name:'Atlanta United', league:'MLS', image:'/images/atlutd.jpg', blurb:'Five Stripes. Relive the cup run and the culture around the club.' }
-]
+  return (
+    <main id="main" className="container">
+      <section className="hero" aria-label="Welcome">
+        <div className="copy">
+          <h1>All Your Game Day Info — In One Place</h1>
+          <p className="page-sub">
+            Track teams, schedules, and storylines with a clean, mobile-first design.
+            Images and copy are finalized for Part 4; no JS beyond the hamburger.
+          </p>
+        </div>
+        <div className="media frame">
+          <img
+            src="/images/sports.jpg"
+            alt="Players running onto the field at sunset"
+            onError={(e) => {
+              e.target.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f5f6f7"/><text x="600" y="310" text-anchor="middle" font-family="sans-serif" font-size="38" fill="%23666">Hero image placeholder</text></svg>';
+            }}
+          />
+        </div>
+      </section>
 
+      <h2 className="section-title">Highlights</h2>
+      <div className="grid">
+        <article className="card">
+          <div className="frame">
+            <img src="/images/falcons.jpg" alt="Falcons players celebrating a score" />
+          </div>
+          <h3>Falcons ride late surge</h3>
+          <p>The Falcons closes strong in the fourth for their third straight win.</p>
+          <div><Link className="btn" to="/news">Read recap</Link></div>
+        </article>
 
-return (
-<div className="stack-lg">
-<Section kicker="Hub" title="Meet the Teams">
-<div className="grid grid-4">
-{teams.map((t)=> (
-<TeamCard key={t.name} {...t} />
-))}
-</div>
-</Section>
+        <article className="card">
+          <div className="frame">
+            <img src="/images/united.jpg" alt="United forward sprinting down the sideline" />
+          </div>
+          <h3>United edges Chealsea</h3>
+          <p>Defense seals it in the final minute to take the series lead.</p>
+          <div><Link className="btn" to="/news">Read recap</Link></div>
+        </article>
 
-
-<Section title="Recent Updates">
-<div className="updates">
-<article className="update">News item #1 (placeholder)</article>
-<article className="update">News item #2 (placeholder)</article>
-<article className="update">News item #3 (placeholder)</article>
-</div>
-</Section>
-</div>
-)
+        <article className="card">
+          <div className="frame">
+            <img src="/images/hawks.jpg" alt="Hawks huddle before kickoff" />
+          </div>
+          <h3>Hawks regroup on the road</h3>
+          <p>New look lineup aims to reset momentum in a tough venue.</p>
+          <div><Link className="btn" to="/news">Read preview</Link></div>
+        </article>
+      </div>
+    </main>
+  )
 }
