@@ -10,6 +10,7 @@
  */
 import { useState, useRef } from 'react'
 import '../styles/contact.css'
+import { withBase } from '../utils/assets'
 
 const ENDPOINT = "https://api.web3forms.com/submit"
 const ACCESS_KEY = "4b370dcc-6fd1-4c70-ad6c-98ba1e9a9835"
@@ -18,6 +19,7 @@ export default function Contact(){
   const [status, setStatus] = useState({ type: '', message: '' })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const formRef = useRef(null)
+  const contactImage = withBase('/images/GetinTouch.jpg')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -73,8 +75,8 @@ export default function Contact(){
           <p className="page-sub">Questions, bug reports, or feature ideas? Send me a note.</p>
         </div>
         <div className="media frame">
-          <img 
-            src="/images/GetinTouch.jpg" 
+          <img
+            src={contactImage}
             alt="Get in Touch"
             onError={(e) => {
               e.target.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f5f6f7"/><text x="600" y="305" text-anchor="middle" font-family="sans-serif" font-size="40" fill="%23666">Contact</text></svg>';
