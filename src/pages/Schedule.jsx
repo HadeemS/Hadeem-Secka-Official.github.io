@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { withBase } from '../utils/assets'
 
 const SCHEDULES = {
   'atlanta-falcons': {
@@ -159,8 +160,8 @@ export default function Schedule(){
         </div>
 
         <div className="media frame">
-          <img 
-            src="/images/tipoff.jpg" 
+          <img
+            src={withBase('/images/tipoff.jpg')}
             alt="Scoreboard with schedules" 
             loading="lazy"
             onError={(e) => {

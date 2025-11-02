@@ -1,4 +1,8 @@
+import { withBase } from '../utils/assets'
+
 export default function Favorites(){
+  const falconsLogo = withBase('/images/falconslogo.png')
+  const unitedLogo = withBase('/images/united.png')
   return (
     <main id="main" className="container">
       <h1 className="section-title">Favorites</h1>
@@ -7,7 +11,7 @@ export default function Favorites(){
       <div className="grid">
         <article className="card">
           <div className="frame">
-            <img src="/images/falconslogo.png" alt="Atlanta Falcons crest" />
+            <img src={falconsLogo} alt="Atlanta Falcons crest" />
           </div>
           <div className="actions">
             <a className="btn" href="/team/atlanta-falcons">Open preview</a>
@@ -19,7 +23,7 @@ export default function Favorites(){
 
         <article className="card">
           <div className="frame">
-            <img src="/images/united.png" alt="Manchester United crest" />
+            <img src={unitedLogo} alt="Manchester United crest" />
           </div>
           <div className="actions">
             <a className="btn" href="/team/manchester-united">Open preview</a>
