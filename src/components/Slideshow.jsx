@@ -14,6 +14,7 @@
  * - Event handlers for user interactions
  */
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/slideshow.css'
 
 export default function Slideshow({ slides }) {
@@ -65,18 +66,24 @@ export default function Slideshow({ slides }) {
               <p>{slide.description}</p>
               {slide.link && (
                 <div>
-                  <a 
-                    className="btn" 
-                    href={slide.link.url}
-                    onClick={(e) => {
-                      if (slide.link.url.startsWith('#')) {
-                        e.preventDefault()
-                        window.location.hash = slide.link.url
-                      }
-                    }}
-                  >
-                    {slide.link.text}
-                  </a>
+                  {slide.link.url?.startsWith('/') ? (
+                    <Link className="btn" to={slide.link.url}>
+                      {slide.link.text}
+                    </Link>
+                  ) : (
+                    <a
+                      className="btn"
+                      href={slide.link.url}
+                      onClick={(e) => {
+                        if (slide.link.url.startsWith('#')) {
+                          e.preventDefault()
+                          window.location.hash = slide.link.url
+                        }
+                      }}
+                    >
+                      {slide.link.text}
+                    </a>
+                  )}
                 </div>
               )}
             </article>

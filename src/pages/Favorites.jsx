@@ -1,3 +1,19 @@
+import { Link } from 'react-router-dom'
+import { withBase } from '../utils/paths'
+
+const favorites = [
+  {
+    id: 'atlanta-falcons',
+    name: 'Atlanta Falcons',
+    crest: 'images/falconslogo.png'
+  },
+  {
+    id: 'manchester-united',
+    name: 'Manchester United',
+    crest: 'images/united.png'
+  }
+]
+
 export default function Favorites(){
   return (
     <main id="main" className="container">
@@ -5,29 +21,19 @@ export default function Favorites(){
       <p className="page-sub">Soon you'll be able to save teams and players here.</p>
 
       <div className="grid">
-        <article className="card">
-          <div className="frame">
-            <img src="/images/falconslogo.png" alt="Atlanta Falcons crest" />
-          </div>
-          <div className="actions">
-            <a className="btn" href="/team/atlanta-falcons">Open preview</a>
-            <a className="btn ghost" href="/team/atlanta-falcons/news">Team news</a>
-          </div>
-          <h3>Atlanta Falcons</h3>
-          <p>Pinned</p>
-        </article>
-
-        <article className="card">
-          <div className="frame">
-            <img src="/images/united.png" alt="Manchester United crest" />
-          </div>
-          <div className="actions">
-            <a className="btn" href="/team/manchester-united">Open preview</a>
-            <a className="btn ghost" href="/team/manchester-united/news">Team news</a>
-          </div>
-          <h3>Manchester United</h3>
-          <p>Pinned</p>
-        </article>
+        {favorites.map((favorite) => (
+          <article key={favorite.id} className="card">
+            <div className="frame">
+              <img src={withBase(favorite.crest)} alt={`${favorite.name} crest`} />
+            </div>
+            <div className="actions">
+              <Link className="btn" to={`/team/${favorite.id}`}>Open preview</Link>
+              <Link className="btn ghost" to={`/team/${favorite.id}/news`}>Team news</Link>
+            </div>
+            <h3>{favorite.name}</h3>
+            <p>Pinned</p>
+          </article>
+        ))}
       </div>
     </main>
   )

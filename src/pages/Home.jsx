@@ -1,29 +1,30 @@
 import { Link } from 'react-router-dom'
 import Slideshow from '../components/Slideshow'
 import '../styles/home.css'
+import { withBase } from '../utils/paths'
 
 export default function Home(){
   const slides = [
     {
-      image: '/Hadeem-Secka-Official.github.io/images/falcons.jpg',
+      image: withBase('images/falcons.jpg'),
       alt: 'Falcons players celebrating a score',
       title: 'Falcons ride late surge',
       description: 'The Falcons closes strong in the fourth for their third straight win.',
-      link: { url: '#/news', text: 'Read recap' }
+      link: { url: '/news', text: 'Read recap' }
     },
     {
-      image: '/Hadeem-Secka-Official.github.io/images/united.jpg',
+      image: withBase('images/united.jpg'),
       alt: 'United forward sprinting down the sideline',
       title: 'United edges Chelsea',
       description: 'Defense seals it in the final minute to take the series lead.',
-      link: { url: '#/news', text: 'Read recap' }
+      link: { url: '/news', text: 'Read recap' }
     },
     {
-      image: '/Hadeem-Secka-Official.github.io/images/hawks.jpg',
+      image: withBase('images/hawks.jpg'),
       alt: 'Hawks huddle before kickoff',
       title: 'Hawks regroup on the road',
       description: 'New look lineup aims to reset momentum in a tough venue.',
-      link: { url: '#/news', text: 'Read preview' }
+      link: { url: '/news', text: 'Read preview' }
     }
   ]
 
@@ -39,7 +40,7 @@ export default function Home(){
         </div>
         <div className="media frame">
           <img
-            src="/Hadeem-Secka-Official.github.io/images/sports.jpg"
+            src={withBase('images/sports.jpg')}
             alt="Players running onto the field at sunset"
             onError={(e) => {
               e.target.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f5f6f7"/><text x="600" y="310" text-anchor="middle" font-family="sans-serif" font-size="38" fill="%23666">Hero image placeholder</text></svg>';

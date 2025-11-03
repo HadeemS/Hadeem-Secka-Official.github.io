@@ -6,6 +6,8 @@ import Schedule from './pages/Schedule'
 import News from './pages/News'
 import Favorites from './pages/Favorites'
 import Contact from './pages/Contact'
+import Team from './pages/Team'
+import TeamNews from './pages/TeamNews'
 
 
 export default function App(){
@@ -18,6 +20,8 @@ export default function App(){
         <Route path="/news" element={<News />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/team/:slug" element={<Team />} />
+        <Route path="/team/:slug/news" element={<TeamNews />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </SiteLayout>

@@ -12,6 +12,7 @@
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import '../styles/nav.css'
+import { withBase } from '../utils/paths'
 
 
 export default function Nav(){
@@ -30,7 +31,11 @@ export default function Nav(){
       <div className="navbar">
         <div className="brand">
           <NavLink to="/" className="brand-link" onClick={closeNav}>
-            <img className="brand-logo" src="/images/logo-gameday-wordmark-red.svg" alt="GameDay" />
+            <img
+              className="brand-logo"
+              src={withBase('images/logo-gameday-wordmark-red.svg')}
+              alt="GameDay"
+            />
           </NavLink>
         </div>
 

@@ -4,7 +4,7 @@ import '../styles/pages.css'
 const newsItems = [
   {
     id: 1,
-    image: '/Hadeem-Secka-Official.github.io/images/penix.png',
+    image: 'images/penix.png',
     alt: 'Falcons quarterback scanning the field',
     title: 'Falcons streak hits three',
     description: 'The Falcons defense clamps down again, setting the tone for a pivotal road win.',
@@ -13,7 +13,7 @@ const newsItems = [
   },
   {
     id: 2,
-    image: '/Hadeem-Secka-Official.github.io/images/amad.png',
+    image: 'images/amad.png',
     alt: 'Manchester United winger attacking space',
     title: 'United holds on late',
     description: 'Back-to-back one-goal wins have Manchester climbing the standings.',
@@ -22,7 +22,7 @@ const newsItems = [
   },
   {
     id: 3,
-    image: '/Hadeem-Secka-Official.github.io/images/hawksfan.png',
+    image: 'images/hawksfan.png',
     alt: 'Hawks supporters in the away section',
     title: 'Hawks look to rebound',
     description: 'The Hawks focuses on set-piece execution heading into a challenging stretch.',
