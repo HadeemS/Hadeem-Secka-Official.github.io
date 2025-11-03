@@ -1,11 +1,15 @@
 {
+  "homepage": "/Hadeem-Secka-Official",
   "name": "Hadeem-Secka-Official.github.io",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
+    
     "preview": "vite preview"
   },
   "dependencies": {
